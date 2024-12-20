@@ -1,0 +1,104 @@
+BACKUP ~JL#ZULU/backup~
+AUTHOR ~jonalun@gmail.com~
+
+ALWAYS
+	ACTION_IF GAME_IS ~BGEE SOD BG2EE IWDEE EET~ THEN BEGIN
+		INCLUDE ~JL#ZULU/fl#add_kit_ee.tpa~
+		ACTION_DEFINE_ARRAY px_reload BEGIN
+		~Setup.tra~
+		END
+		ACTION_DEFINE_ARRAY px_noconvert BEGIN END
+			LAF HANDLE_CHARSETS
+			INT_VAR
+			infer_charset = 1
+			STR_VAR
+			tra_path = EVAL ~%MOD_FOLDER%/Language~
+			noconvert_array = px_noconvert
+			reload_array = px_reload
+		END
+	END
+END
+
+
+LANGUAGE ~English~
+         ~english~
+         ~JL#ZULU/Language/English/Setup.tra~
+         
+LANGUAGE  ~French (translated by Deratiseur)~
+         ~french~
+         ~JL#ZULU/Language/French/Setup.tra~
+
+
+BEGIN @1
+
+
+COPY ~JL#ZULU/JL#ZPOLY.BAM~ ~override~
+
+COPY ~JL#ZULU/JL#ZPOLY.SPL~ ~override~
+ SAY NAME1 @2 
+ SAY NAME2 @2
+
+COPY ~JL#ZULU/JL#ZSPL.SPL~ ~override~
+
+COPY ~JL#ZULU/JL#ZPAW.ITM~ ~override~
+SAY NAME1 @3
+SAY NAME2 @3
+
+COPY ~JL#ZULU/JL#ZLION.CRE~ ~override~
+SAY NAME1 @4
+SAY NAME2 @4
+
+
+
+//shamelessly stolen ^H^H^H^H^H^H ADAPTED from CamDawg's tutorial at G3 <_<
+
+// internal name of the kit
+ADD_KIT ~JL#ZULU~
+
+ // appended to CLASWEAP.2da
+ ~JL#ZULU                1           1           1           0           0           1           1           1~
+
+ // appended column-wise to WEAPPROF.2da
+ ~JL#ZULU 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 0 0 0 0 0 2 2 2 3 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5~
+   
+ // appended to ABCLASRQ.2da
+ ~JL#ZULU                13      13     14       0      14       0~
+
+ // appended to ABCLSMOD.2da
+ ~JL#ZULU                0       0       0       0       0       0~
+
+ // appended to ABDCDSRQ.2da
+ ~JL#ZULU                0       0       0       0       0      0~
+
+ // appended to ABDCSCRQ.2da
+ ~JL#ZULU                0       0       0       0       0      0~
+
+ // appended to ALIGNMNT.2da
+ ~JL#ZULU                1       0       0       1       0       0       1       0       0~
+
+ // appended to DUALCLAS.2da
+ ~JL#ZULU                0       1       0       0       0       0~
+
+ // path to your CLAB-style 2da file
+ ~JL#ZULU/JL#ZULU.2da~
+
+ // PC races and classes allowed to use this kit, from KITTABLE.2da
+ ~K_R_H~
+
+ // usability flags, added to the end of the KITLIST.2da entry
+ ~0x00010004     12~
+
+ // HLA table to use; see LUABBR.2da
+ ~RA0~
+
+ // list of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
+ ~* * HELM19 BAG22 RING06 RING29 CLCK02 BOOT01 AMUL19 BRAC14 BELT06 * * * POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+ 
+ // Lower, mixed, and help kit names and descriptions, added to KITLIST.2da
+ SAY @5
+ SAY @5
+ SAY @6
+ 
+ACTION_IF GAME_IS ~BGEE SOD BG2EE IWDEE EET~ THEN BEGIN
+	LAF fl#add_kit_ee STR_VAR kit_name = JL#ZULU clsrcreq = ~1 0 0 0 0 0 0~ END
+END

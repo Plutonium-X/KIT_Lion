@@ -1,0 +1,14 @@
+GUERRIER LION: Ce guerrier perpétue les traditions transmises par la tribu Lion de Shaar. Il combine des compétences de combat mortelles avec des dons de survie en milieu sauvage sans égaux et un fort lien avec la nature. Il dédaigne les armes de jet, mais rares sont ceux qui peuvent égaler sa puissance en mêlée.
+
+Avantages:
+- Bonus de -2 à la CA. Ce bonus passe à -4 au niveau 15.
+- Bonus de +1 au toucher et aux dommages au premier niveau et tous les 10 niveaux suivants.
+- Au niveau 13 il gagne la capacité de se transformer en lion une fois par jour. Une utilisation supplémentaire est gagnée tous les 5 niveaux suivants.
+- peut mémoriser deux sorts supplémentaires par niveau.
+- Peut atteindre le plus haut niveau de maîtrise avec toutes les armes de mêlée.
+
+Désavantages:
+- Ne peut utiliser des armes de trait.
+- Ne peut porter d'armure.
+- Ne peut porter de gantelets ou de bracelets.
+- Ne gagne pas la capacité "Charme animal"
