@@ -1,5 +1,6 @@
 BACKUP ~JL#ZULU/backup~
 AUTHOR ~jonalun@gmail.com~
+Version ~3.01~
 
 ALWAYS
 	ACTION_IF GAME_IS ~BGEE BG2EE IWDEE EET~ THEN BEGIN
@@ -103,3 +104,4 @@ ACTION_IF GAME_IS ~BGEE BG2EE IWDEE EET~ THEN BEGIN
 	LAF fl#add_kit_ee STR_VAR kit_name = JL#ZULU clsrcreq = ~1 0 0 0 0 0 0~ END
 
 END
+
